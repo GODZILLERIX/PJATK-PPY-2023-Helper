@@ -160,7 +160,7 @@ else:
 # --------------------------------------------------------------------------
 # Zmodyfikuj zadanie 7 w taki sposób aby użytkownik mógł podać zakres liczb
 # oraz ilość dowolnych liczb k.
-# Wyniki wyświetl w postaci słownika (k: liczby całkowite)
+# Wyniki wyświetl w postaci słownika (k: liczby całkowite)(you need to create
 
 a = int(input("Podaj początek zakresu: "))
 b = int(input("Podaj koniec zakresu: "))
