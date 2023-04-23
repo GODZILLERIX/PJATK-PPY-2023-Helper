@@ -171,7 +171,7 @@ for i in range(n):
     element = int(input("Podaj wartośći k: "))
     list.append(element)
 
-    for element in list:
+for element in list:
         res = {}
         for i in range(a, b+1):
             if i % element == 0:
