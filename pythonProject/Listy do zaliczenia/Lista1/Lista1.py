@@ -164,17 +164,22 @@ else:
 
 a = int(input("Podaj początek zakresu: "))
 b = int(input("Podaj koniec zakresu: "))
-k = int(input("Podaj wartość k: "))
+n = int(input("Podaj długość lista wartośćiej k: "))
 
-res = {}
-for i in range(a, b+1):
-    if i % k == 0:
-        if k not in res:
-            res[k] = []
-        res[k].append(i)
+list = []
+for i in range(n):
+    element = int(input("Podaj wartośći k: "))
+    list.append(element)
 
-print(res)
+    for element in list:
+        res = {}
+        for i in range(a, b+1):
+            if i % element == 0:
+                if element not in res:
+                    res[element] = []
+                res[element].append(i)
 
+        print(res)
 
 
 # Zadanie 9 - 3 pkt
