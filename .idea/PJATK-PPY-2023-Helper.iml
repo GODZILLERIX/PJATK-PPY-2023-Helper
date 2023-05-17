@@ -7,7 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/conda/Lib" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/conda/Lib/site-packages" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.10 (PJATK-PPY-2023-Helper)" jdkType="Python SDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">
