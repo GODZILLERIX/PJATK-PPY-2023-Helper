@@ -7,11 +7,14 @@
       <sourceFolder url="file://$MODULE_DIR$/conda/Lib" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/conda/Lib/site-packages" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.10 (grupa3PPYs22347)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="format" value="PLAIN" />
     <option name="myDocStringFormat" value="Plain" />
+  </component>
+  <component name="ReSTService">
+    <option name="DOC_DIR" value="C:\Users\s22347\Desktop\git ppy\PJATK-PPY-2023-Helper\pythonProject\LAB10\doc" />
   </component>
 </module>

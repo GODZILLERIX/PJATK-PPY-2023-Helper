@@ -34,7 +34,7 @@
 #         print()
 # zad1()
 
-print()
+#print()
 
 #Zadanie 2 - 6 ptk
 # ---------------------------------------------------------------------------------
@@ -42,30 +42,37 @@ print()
 #odejmowania, mnożenia, dzielenia, dzielenia bez reszty, %, pierwiastek kwadratowy,
 #pierwiastek dowolnego stopnia, potęga)
 
-
-
+x = input("Enter an operator (+, -, *, /, //, %, pkwdrt): ")
 
 
 def dodawanie(num1, num2):
     return num1 + num2
+
 def odejmowanie(num1, num2):
     return num1 - num2
+
 def mnożenie(num1, num2):
     return num1 * num2
+
 def dzielenie(num1, num2):
     return num1 / num2
+
 def dzielenia_bez_reszty(num1, num2):
     return num1 // num2
+
 def procent(num1, num2):
     return (num1 / 100) * num2
-def pkwadrat(num1, num2):
-    return num1 + num2
-def pierwiastek_dowolnego_stopnia(num1, num2):
-    return num1 + num2
-def potęga(num1, num2):
-    return num1 + num2
 
-x = input("Enter an operator (+, -, *, /, //, %, pkwdrt): ")
+def pierwiastek_kwadrat(num3):
+    return num3 ** (0.5)
+
+# def pierwiastek_dowolnego_stopnia(num1, num2):
+#     return num1 + num2
+#
+# def potęga(num1, num2):
+#     return num1 + num2
+
+
 
 
 if x == "+":
@@ -74,38 +81,41 @@ if x == "+":
     result1 = dodawanie(num1, num2)
     print(result1)
 
-# elif x == "-":
-#     result2 = num1 - num2
-#     print(result2)
-#
-# elif x == "*":
-#      result3 = num1 * num2
-#      print(result3)
-#
-# elif x == "/":
-#     result4 = num1 / num2
-#     print(result4)
-#
-# elif x == "//":
-#     result5 = num1 // num2
-#     print(result5)
-#
-# elif x == "%":
-#     result6 = (num1 / 100) * num2
-#     print(result6)
+elif x == "-":
+    num1 = float(input("Enter the 1st number: "))
+    num2 = float(input("Enter the 2nd number: "))
+    result2 = odejmowanie(num1, num2)
+    print(result2)
 
+elif x == "*":
+    num1 = float(input("Enter the 1st number: "))
+    num2 = float(input("Enter the 2nd number: "))
+    result3 = mnożenie(num1, num2)
+    print(result3)
 
+elif x == "/":
+    num1 = float(input("Enter the 1st number: "))
+    num2 = float(input("Enter the 2nd number: "))
+    result4 = dzielenie(num1, num2)
+    print(result4)
 
+elif x == "//":
+    num1 = float(input("Enter the 1st number: "))
+    num2 = float(input("Enter the 2nd number: "))
+    result5 = dzielenia_bez_reszty(num1, num2)
+    print(result5)
 
+elif x == "%":
+    num1 = float(input("Enter the 1st number: "))
+    num2 = float(input("Enter the 2nd number: "))
+    result6 = procent(num1, num2)
+    print(result6)
 
-# def kwadrat():
-#
-#     if x == "kwdrt":
-#         kwadrat()
-#         num3 = float(input("Enter the number"))
-#         result7 = num3 ** (0.5)
-#         print(result7)
-#
+elif x == "pkwdrt":
+    num3 = float(input("Enter the number"))
+    result7 = pierwiastek_kwadrat(num3)
+    print(result7)
+
 # #elif x ==
 # numbers()
 # kwadrat()
