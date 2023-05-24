@@ -1,3 +1,9 @@
+# Zadanie 4 - 10 ptk
+# ---------------------------------------------------------------------------------
+# Napisz  skrypt,  który  będzie  generował  token uwierzytelniający własnego  autorstwa.
+# Użytkownik  po  podaniu  imienia,  nazwiska, adresu  e-mail oraz daty  ważności  tokena powinien otrzymać unikalny token.
+# Skrypt powinien również umożliwić wprowadzenie tokena  i  sprawdzenie  jego  ważności.  Na  postawie  tokena powinniśmy uzyskać dane użytkownika.
+
 import datetime
 import random
 
