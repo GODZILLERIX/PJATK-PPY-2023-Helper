@@ -4,51 +4,68 @@
 # Użytkownik  po  podaniu  imienia,  nazwiska, adresu  e-mail oraz daty  ważności  tokena powinien otrzymać unikalny token.
 # Skrypt powinien również umożliwić wprowadzenie tokena  i  sprawdzenie  jego  ważności.  Na  postawie  tokena powinniśmy uzyskać dane użytkownika.
 
-import datetime
-import random
+user_data = {}
 
-users_data = {}
+def generate_unique_number():
 
-def generate_token(first_name, last_name, email, valid_until):
-    # Generate a random token using a combination of letters and digits
-    token = ''.join(chr(ord('a') + random.randint(0, 25)) for _ in range(10))
-    users_data[token] = {
+    if len(user_data) == 0:
+        return 1
+    else:
+        return max(user_data.keys()) + 1
+
+def add_user():
+
+    first_name = input("Podaj imię użytkownika: ")
+    last_name = input("Podaj nazwisko użytkownika: ")
+    email = input("Podaj adres e-mail użytkownika: ")
+    date = input("Podaj datę użytkownika (w formacie DD.MM.RRRR): ")
+
+    unique_number = generate_unique_number()
+    user_data[unique_number] = {
         'first_name': first_name,
         'last_name': last_name,
         'email': email,
-        'valid_until': valid_until,
+        'date': date
     }
-    return token
+    print()
+    print(f"Użytkownik o unikalnym numerze {unique_number} został dodany.")
+    print()
 
-def check_token_validity(token):
-    if token in users_data:
-        valid_until = users_data[token]['valid_until']
-        if valid_until >= datetime.datetime.now():
-            return True
-    return False
+def find_user():
 
-def get_user_data(token):
-    if token in users_data:
-        return users_data[token]
-    return None
+    unique_number = int(input("Podaj unikalny numer użytkownika: "))
 
-first_name = input("Enter your first name: ")
-last_name = input("Enter your last name: ")
-email = input("Enter your email address: ")
-valid_until_str = input("Enter the token validity date (YYYY-MM-DD): ")
+    if unique_number in user_data:
+        user = user_data[unique_number]
+        print(f"Imię: {user['first_name']}")
+        print(f"Nazwisko: {user['last_name']}")
+        print(f"Adres e-mail: {user['email']}")
+        print(f"Data: {user['date']}")
+    else:
+        print()
+        print("Nie znaleziono użytkownika o podanym unikalnym numerze.")
+        print()
 
-valid_until = datetime.datetime.strptime(valid_until_str, "%Y-%m-%d")
+def main():
+    while True:
+        print()
+        print("Wybierz akcję:")
+        print("1. Dodaj użytkownika")
+        print("2. Znajdź użytkownika po unikalnym numerze")
+        print("3. Wyjdź")
+        print()
 
-token = generate_token(first_name, last_name, email, valid_until)
-print("Generated token:", token)
+        choice = input("Podaj numer akcji: ")
+        print()
 
-input_token = input("Enter the token to check: ")
-if check_token_validity(input_token):
-    user_data = get_user_data(input_token)
-    print("User Data:")
-    print("First Name:", user_data['first_name'])
-    print("Last Name:", user_data['last_name'])
-    print("Email:", user_data['email'])
-    print("Token Validity:", user_data['valid_until'])
-else:
-    print("Invalid token or token has expired.")
+        if choice == '1':
+            add_user()
+        elif choice == '2':
+            find_user()
+        elif choice == '3':
+            break
+        else:
+            print("Nieprawidłowe dane wejściowe. Spróbuj ponownie.")
+
+if __name__ == '__main__':
+    main()
